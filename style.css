@@ -1,0 +1,143 @@
+@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #78c1f3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 1rem;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.btn input, .btn button{
+  width: 50%;
+  height: 45px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0;
+  text-transform: capitalize;
+}
+
+.btn .startquiz, .btn .resetquiz {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background: #78c1f3;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+}
+
+.quizHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.quizBody {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.loader {
+  text-align: center;
+  margin: 5rem;
+  font-size: 55px;
+}
+
+.quizFooter {
+  text-align: end;
+}
+
+.quizFooter button {
+  height: 35px;
+  width: 20%;
+  cursor: pointer;
+  color: #fff;
+  background: #78c1f3;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+}
+
+.playground, .loader, .endScreen {
+  display: none;
+}
+
+.error {
+  position: relative;
+  animation: shake .1s linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+  0% { left: -5px; }
+  100% { right: -5px; }
+}
+
+.quizBody #quizOptions {
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+.quizBody #quizOptions li {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.quizBody #quizOptions li:hover {
+  border: 1px solid #689f38;
+}
+
+.quizBody #quizOptions li.correct {
+  background: #e7f6d5;
+  color: #689f38;
+  border: #689f38;
+}
+
+.quizBody #quizOptions li.incorrect {
+  background: #ffdde0;
+  color: #d32f2f;
+  border: #d32f2f;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.endScreen p {
+  text-align: center;
+  margin-bottom: 10px;
+}
